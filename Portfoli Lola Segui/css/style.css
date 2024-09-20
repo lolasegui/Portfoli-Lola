@@ -1,5 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --font-principal:"EB Garamond", system-ui;
+    --font-secundaria:"Gowun Batang", system-ui;
+
+    --pes-font:300;
+    --pes-negreta:900;
+
+    --colorClar: #eddea4;
+    --colorFosc: #ffe1a8;
+    --colorResaltar: #fcbf49;
+    --colorLletres: #000;
+
+    --tamany-h1: 3rem;
+    --tamany-h2: 2.25rem;
+    --tamany-h3: 1.25rem;
+    --tamany-body: 1rem;
+
+}
+@media (min-widh:800px) {
+    .root {
+        --tamany-h1: 4.5rem;
+    --tamany-h2: 3.75rem;
+    --tamany-h3: 1.5rem;
+    --tamany-body: 1.125rem;
+
+    }
+}
+
 body{
+    background:var(--colorClar);
+    color:var(--colorLletres);
+    margin: 0;
+    font-family: var(--font-principal);
+    font-size:var(--tamany-body);
+    line-height: 1.66;
+
+}
+img{
+    display:block;
+    max-width: 100%;
+
+}
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    margin:0
+}
+
+h1{
+    font-size: var(--tamany-h1)
+}
+h2{
+    font-size: var(--tamany-h2)
+}
+h3{
+    font-size: var(--tamany-h3)
+}
+
+
+
+
+/*body{
     background-color:bisque
 
 }
 eddea4    ffe1a8     fcbf49
++/
