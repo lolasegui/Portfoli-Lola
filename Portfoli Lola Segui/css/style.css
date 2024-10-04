@@ -7,8 +7,8 @@
     --font-principal:"EB Garamond", system-ui;
     --font-secundaria:"Gowun Batang", system-ui;
 
-    --pes-font:300;
-    --pes-negreta:900;
+    --pes-font: 300;
+    --pes-negreta: 900;
 
     --colorClar: #eddea4;
     --colorFosc: #ffe1a8;
@@ -46,7 +46,7 @@ body{
     font-size:var(--tamany-body);
     line-height: 1.66;}
     section{
-        padding: 5rem 2rem;
+        padding: 5em 2em;
     }
 img{
     display:block;
@@ -56,7 +56,7 @@ img{
 h1,
 h2,
 h3{
-    line-height: 1.1;
+    line-height: 1;
     margin:0
 }
 
@@ -83,15 +83,15 @@ h3{
 }
 
 .subtitol-intro,
-.subtitol-about{
+.subtitol-about {
 background: var(--colorResaltar);
 font-family: var(--font-secundaria);
 margin-bottom: 1em;
-padding: .25 em 1em;
+padding: .25em 1em;
 }
 
 .titol-intro strong{
-    display:block;
+    display: block;
 }
 .intro{
     position: relative;
@@ -113,6 +113,7 @@ padding: .25 em 1em;
         min-width: 250px;
         position: relative;
         z-index: 2;
+        left: -1em;
     }
 
     .subtitol-intro{
@@ -143,24 +144,96 @@ padding: .25 em 1em;
     background-blend-mode:multiply;
 }
 .titol-serveis{
-    color: var(--colorResaltar);
+    color: var(--colorLletres);
     position: relative;
 }
 
 @media (min-width: 800px){
     .Serveis{
         display: flex;
-        max-width: 1000;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
+    .Servei + .Servei{
+        margin-left: 2em;
+    }
 }
 
-.Servei + .Servei{
-    margin-left: 2em;
-}
 
-.servei{
-    max-width: 500px;
+
+.about{
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-img{
+    box-shadow: var(--sombra);
+}
+
+@media (min-width: 600px){
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+
+    .titol-about{
+        grid-area: title;
+
+    }
+
+    .subtitol-about{
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+  
+    }
+
+    .about-img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.subtitol-treballs{
+    color: var(--colorLletres);
+    font-weight: var(--pes-negreta);
+    margin-bottom: 2em;
+}
+
+.treballs{
+background-color: var(--colorFosc);
+color: var(--colorClar);
+text-align: center;
+
+}
+
+.portfoli{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+}
+
+.portfoli-obj{
+background: var(--colorResaltar);
+overflow: hidden;
+}
+
+.portfoli-img{
+    transition:
+    transform 750 cubic-bezier (.5, 0, .55, 1)
+    opacity 250ms linear; 
+    width: 100%
+}
+
+.portfoli-img:hover{
+transform: scale (1.2);
+opacity: .5;
 }
