@@ -32,9 +32,7 @@
 
     }
 }
-nav{
-    display: none;
-}
+
 strong{
     font-weight: var(--pes-negreta);
 }
@@ -297,3 +295,52 @@ opacity: .5;
     margin: 2em;
     padding: 0em;
 }
+
+header{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+
+}
+
+.logo{
+    max-width: 100px;
+}
+
+.menu{
+    position: fixed;
+    background-color: var(--colorFosc);
+    color: var(--colorLletres);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    
+}
+
+.menu-lista{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+
+.menu-link{
+    color: inherit;
+    text-decoration: none;
+    font-weight:  var(--pes-negreta);
+    font-size: var(--tamany-h2)
+}
+
+.menu-link:hover{
+    color: var(--colorResaltar)
+}
+
+/* transform: translateX(100%);
+    transition: transform 250ms cubic-bezier (.5, 0, .5, 1);*/
