@@ -317,6 +317,9 @@ header{
     right: 0;
     z-index: 100;
 
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier (.5, 0, .5, 1);
+
     
 }
 
@@ -342,5 +345,55 @@ header{
     color: var(--colorResaltar)
 }
 
-/* transform: translateX(100%);
-    transition: transform 250ms cubic-bezier (.5, 0, .5, 1);*/
+.hamburguer{
+    display: block;
+    position: relative;
+    background-color: var(--colorResaltar);
+    width: 2em;
+    height: 6px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+.hamburguer,
+.hamburguer::after,
+.hamburguer::before{
+    background-color: var(--colorResaltar);
+    width: 2em;
+    height: 6px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+
+}
+
+.hamburguer::after{
+    top: 12px;
+
+}
+
+.hamburguer::before{
+    bottom: 12px;
+}
+
+.desplegable{
+    padding: 0.5em;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.lola{
+    transform: translateX(0%);
+    transition:  transform 250ms cubic-bezier(.5, 0., 5.,.1);
+}

@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gowun+Batang:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
     <script src="https://kit.fontawesome.com/3249813dce.js" crossorigin="anonymous"></script>
     <title>Lola Seguí</title>
 </head>
@@ -19,8 +20,8 @@
         <div class="logo">
             <img src="./img/logo-color.png" alt="" srcset="" >
         </div>
-        <button>
-            <span></span>
+        <button class="desplegable">
+            <span class="hamburguer"></span>
         </button>
         <nav class="menu">
             <ul class="menu-lista">
@@ -158,5 +159,11 @@
         </ul>
     </footer>
 </body>
+<script>
+    document.getElementById("hola").addEventListener("click", function(){
+        document.getElementById("m").classList.add("lola");
+    
+}
+</script>
 
 </html>
