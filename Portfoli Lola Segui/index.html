@@ -18,24 +18,24 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./img/logo-color.png" alt="" srcset="" >
+            <img src="./img/logo-no-background(2).png" alt="" srcset="" >
         </div>
-        <button class="desplegable">
+        <button id="hola"class="desplegable">
             <span class="hamburguer"></span>
         </button>
-        <nav class="menu">
+        <nav id="lolaa" class="menu">
             <ul class="menu-lista">
                 <li class="menu-item">
-                    <a href="#Intro" class="menu-link">Lola Seguí</a>
+                    <a href="#Intro" class="menu-link" id="b1">Lola Seguí </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#Serveis" class="menu-link">Serveis</a>
+                    <a href="#Serveis" class="menu-link" id="b2">Serveis</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#Sobre Mi" class="menu-link">Sobre Mi</a>
+                    <a href="#Sobre Mi" class="menu-link" id="b3">Sobre Mi</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#Treballs" class="menu-link">Els meus treballs</a>
+                    <a href="#Treballs" class="menu-link" id="b4">Els meus treballs</a>
                 </li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@
     <section id="Intro" class="intro">
         <h1 class="titol-intro">Hola, soc na <strong> Lola Seguí</strong></h1>
         <p class="subtitol subtitol-intro">Alumna de 2n de batxillerat</p>
-        <img src="./img/foto.jpg" alt="" class="intro-img">
+        <img src="./img/foto.jpg" alt="" class="intro-img slide-bck-center">
 
     </section>
     <section id="Serveis" class="meusServeis">
@@ -120,7 +120,7 @@
 
 
             <a href="#" class="portfoli-obj">
-                <img src=".//img/hermano.jpg" class="portfoli-img">
+                <img src="./img/lucas.jpg" class="portfoli-img">
             </a>
 
 
@@ -161,9 +161,25 @@
 </body>
 <script>
     document.getElementById("hola").addEventListener("click", function(){
-        document.getElementById("m").classList.add("lola");
+        document.getElementById("lolaa").classList.add("lola");
+
+})
+document.getElementById("b1").addEventListener("click", function(){
+        document.getElementById("lolaa").classList.remove("lola");
     
-}
+})
+document.getElementById("b2").addEventListener("click", function(){
+        document.getElementById("lolaa").classList.remove("lola");
+    
+})
+document.getElementById("b3").addEventListener("click", function(){
+        document.getElementById("lolaa").classList.remove("lola");
+    
+})
+document.getElementById("b4").addEventListener("click", function(){
+        document.getElementById("lolaa").classList.remove("lola");
+    
+})
 </script>
 
 </html>
